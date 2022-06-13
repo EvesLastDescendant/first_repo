@@ -1,0 +1,105 @@
+:root{
+  --white: #FFFFFF;
+  --red: hsl(0, 100%, 74%);
+  --grey: rgb(128, 128, 128);
+  --green:  hsl(154, 59%, 51%);
+  --blue:  hsl(248, 32%, 49%);
+  --platinum: #DBD4D2;
+  --darkblue: hsl(249, 10%, 26%);
+  --grayishblue: hsl(246, 25%, 77%);
+
+}
+body{
+  background-color: var(--red);
+  background-image: url("bg-intro-desktop.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: screen;
+  margin-top: 2.1in;
+  font-family: "Poppins";
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr;
+  grid-row-gap: 5px;
+  justify-items: center;
+  align-items: center;
+}
+div{
+  color: var(--white);
+}
+.text, aside{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: flex-start;
+  align-items: center;
+}
+aside{
+  gap: 0.3in;
+}
+form{
+  width: 9cm;
+  background: var(--white);
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 2fr 2fr 2fr 2fr 2fr;
+  gap: 10px;
+  justify-items: stretch;
+  align-items: center;
+  padding: 50px 30px;
+  border-radius: 7px;
+  box-shadow: 5px 5px 5px var(--grey);
+}
+input{
+  height: 0.9cm;
+  border-radius: 4px;
+}
+input[type="text"], input[type="email"], input[type="password"]{
+  padding-left: 0.5cm;
+  border: 1px solid var(--grey);
+}
+input[type="submit"]{
+  font-size: x-small;
+  background-color: var(--green);
+  border: none;
+}
+input[type="submit"]:hover{
+  box-shadow: inset 0px 0px 16px 2px var(--white) ;
+}
+button, span{
+  font-size: x-small;
+}
+button{
+  width: 10.5cm;
+  height: 40px;
+  border-radius: 7px;
+  border: none;
+  color: var(--white);
+  background: var(--blue);
+  box-shadow: 5px 5px 5px var(--grey);
+}
+button:hover{
+  box-shadow: none;
+}
+span{
+  color: var(--platinum);
+}
+a{
+  text-decoration: none;
+  color: var(--red);
+}
+@media screen and(max-width: 375px) {
+  body{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    justify-items: stretch;
+    align-items: stretch;
+  }
+}
+@media screen and(max-width: 1440px) {
+  input[type="submit"]:hover{
+    box-shadow: 5px 5px 20px 0px var(--grey);
+  }
+}
